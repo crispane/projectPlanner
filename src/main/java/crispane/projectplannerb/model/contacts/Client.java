@@ -6,6 +6,7 @@ import javax.persistence.Entity;
 import javax.persistence.GeneratedValue;
 import javax.persistence.GenerationType;
 import javax.persistence.Id;
+import javax.validation.constraints.Size;
 
 @Entity
 @Getter
@@ -19,5 +20,6 @@ public class Client {
     private Long id;
 
     @NonNull
+    @Size(min=3, message="Name must be at least 3 characters long.")
     private String name;
 }
