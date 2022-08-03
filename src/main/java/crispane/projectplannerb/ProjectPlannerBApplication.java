@@ -19,8 +19,8 @@ public class ProjectPlannerBApplication implements CommandLineRunner {
 
     @Override
     public void run(String... args) throws Exception {
-        Client client1 = new Client("IBM");
-        repo.save(client1);
+//        Client client1 = new Client("IBM");
+//        repo.save(client1);
 
     }
 

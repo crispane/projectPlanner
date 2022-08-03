@@ -1,0 +1,12 @@
+create table client (id bigint not null auto_increment, name varchar(255), primary key (id)) engine=InnoDB;
+alter table client add constraint UK_dn5jasds5r1j3ewo5k3nhwkkq unique (name);
+create table client (id bigint not null auto_increment, name varchar(255), primary key (id)) engine=InnoDB;
+alter table client add constraint UK_dn5jasds5r1j3ewo5k3nhwkkq unique (name);
+create table client (id bigint not null auto_increment, name varchar(255), primary key (id)) engine=InnoDB;
+alter table client add constraint UK_dn5jasds5r1j3ewo5k3nhwkkq unique (name);
+create table client (id bigint not null auto_increment, name varchar(255), primary key (id)) engine=InnoDB;
+alter table client add constraint UK_dn5jasds5r1j3ewo5k3nhwkkq unique (name);
+create table client (id bigint not null auto_increment, name varchar(255), primary key (id)) engine=InnoDB;
+alter table client add constraint UK_dn5jasds5r1j3ewo5k3nhwkkq unique (name);
+create table client (id bigint not null auto_increment, name varchar(255), primary key (id)) engine=InnoDB;
+alter table client add constraint UK_dn5jasds5r1j3ewo5k3nhwkkq unique (name);

@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Contacts</title>
+</head>
+<body>
+<form method="POST" th:object="${contact}">
+    <div class="grid">
+        <div class="ingredient-group" id="wraps">
+            <h3>Designate Client:</h3>
+
+            <select th:field="*{client.id}">
+                <option th:each="client : ${clients}"
+                        th:value="${client.id}"
+                        th:text="${client.name}">Wireframe</option>
+            </select>
+        </div>
+    </div>
+    <h3>Contact name:</h3>
+    <input type="text" th:field="${contact.name}"/>
+    <button>Submit Contact</button>
+</form>
+<a th:href="@{/}">Go Home</a>
+</body>
+</html>

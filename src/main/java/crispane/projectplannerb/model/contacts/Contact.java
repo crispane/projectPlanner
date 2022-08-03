@@ -1,19 +1,19 @@
 package crispane.projectplannerb.model.contacts;
 
-import lombok.*;
+
+import lombok.Getter;
+import lombok.NoArgsConstructor;
+import lombok.Setter;
 
 import javax.persistence.*;
 import javax.validation.constraints.NotBlank;
 import javax.validation.constraints.Size;
-import java.util.ArrayList;
-import java.util.List;
 
 @Entity
 @Getter
 @Setter
 @NoArgsConstructor
-//@RequiredArgsConstructor
-public class Client {
+public class Contact {
 
     @Id
     @GeneratedValue(strategy= GenerationType.IDENTITY)
@@ -24,14 +24,7 @@ public class Client {
     @Size(min=3, message="Name must be at least 3 characters long.")
     private String name;
 
-//    @Size(min=1, message="You must enter at least 1 contact.")
-    @OneToMany(mappedBy = "client",
-    orphanRemoval = true,
-    fetch = FetchType.LAZY,
-    cascade = CascadeType.ALL)
-    private List<Contact> contacts = new ArrayList<>();
-
-    public void addContact(Contact contact) {
-        this.contacts.add(contact);
-    }
+    @ManyToOne(fetch = FetchType.LAZY)
+    @JoinColumn(name = "clientId")
+    private Client client;
 }
